@@ -55,76 +55,122 @@ createApp(App)
 The HTML markup snippet for this challenge is written below. an important aspect of this markup is that the checkboxes have been modeled to the checked array from the data method. whenever a checkbox is clicked, its value would be inside that array
 ```
 <template>
-    <div class="
-        container-fluid
-        d-flex
-        flex-column
-        aligns-items-center
-        justify-content-center
-        bg-dark
-      ">
-        <div class="row bg-dark border-bottom border-primary border-3">
-            <div class="col-4 text-light pt-2 ps-4">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="happy" id="flexCheckDefault"
-                        v-model="checked" checked />
-                    <font-awesome-icon icon="fa-solid fa-face-grin-wide" style="color: yellow; font-size: 25px" />
-                </div>
-            </div>
-            <div class="col-4 text-light pt-2 ps-4">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="meh" id="flexCheckDefault" v-model="checked"
-                        checked />
-                    <font-awesome-icon icon="fa-solid fa-face-meh" style="color: yellow; font-size: 25px" />
-                </div>
-            </div>
-            <div class="col-4 text-light pt-2 ps-4">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="sad" id="flexCheckDefault" v-model="checked"
-                        checked />
-                    <font-awesome-icon icon="fa-solid fa-face-frown" style="color: yellow; font-size: 25px" />
-                </div>
-            </div>
+  <div
+    class="
+      container-fluid
+      d-flex
+      flex-column
+      aligns-items-center
+      justify-content-center
+      bg-dark
+    "
+  >
+    <div class="row bg-dark border-bottom border-primary border-3">
+      <div class="col-4 text-light pt-2 ps-4 d-flex justify-content-center">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value="happy"
+            id="flexCheckDefault"
+            v-model="checked"
+            checked
+          />
+          <font-awesome-icon
+            icon="fa-solid fa-face-grin-wide"
+            style="color: yellow; font-size: 25px"
+          />
         </div>
-        <div class="container-fluid" v-for="item in computedItems" :key="item.id">
-            <div class="row bg-dark p-3">
-                <div class="
-              col-4
-              text-light
-              d-flex
-              aligns-items-center
-              justify-content-center
-            ">
-                    <font-awesome-icon v-bind="{ icon: item.icon }"
-                        :style="{ fontSize: 25 + 'px', color: item.color }" />
-                </div>
-                <div class="
-              col-4
-              text-light
-              d-flex
-              aligns-items-center
-              justify-content-center
-            ">
-                    <h5>{{item.text}}</h5>
-                </div>
-                <div class="
-              col-4
-              text-light
-              d-flex
-              aligns-items-center
-              justify-content-center
-            ">
-                    <input class="
-                bg-dark
-                text-light
-                border border-secondary border-3
-                rounded
-                ps-2
-              " type="number" name="" id="" :value="item.id" style="width: 70%" />
-                </div>
-            </div>
+      </div>
+      <div class="col-4 text-light pt-2 ps-4 d-flex justify-content-center">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value="meh"
+            id="flexCheckDefault"
+            v-model="checked"
+            checked
+          />
+          <font-awesome-icon
+            icon="fa-solid fa-face-meh"
+            style="color: yellow; font-size: 25px"
+          />
         </div>
+      </div>
+      <div class="col-4 text-light pt-2 ps-4 d-flex justify-content-center">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value="sad"
+            id="flexCheckDefault"
+            v-model="checked"
+            checked
+            
+          />
+          <font-awesome-icon
+            icon="fa-solid fa-face-frown"
+            style="color: yellow; font-size: 25px"
+          />
+        </div>
+      </div>
     </div>
+    <div class="container-fluid" v-for="item in computedItems" :key="item.id">
+      <div class="row bg-dark p-3">
+        <div
+          class="
+            col-4
+            text-light
+            d-flex
+            aligns-items-center
+            justify-content-center
+          "
+        >
+          <font-awesome-icon
+            v-bind="{ icon: item.icon }"
+            :style="{ fontSize: 25 + 'px', color: item.color }"
+          />
+        </div>
+        <div
+          class="
+            col-4
+            text-light
+            d-flex
+            aligns-items-center
+            justify-content-center
+          "
+        >
+          <h5>{{item.text}}</h5>
+        </div>
+        <div
+          class="
+            col-4
+            text-light
+            d-flex
+            aligns-items-center
+            justify-content-center
+          "
+        >
+          <input
+            class="
+              bg-dark
+              text-light
+              border border-secondary border-3
+              rounded
+              ps-2
+              
+            "
+            type="number"
+            name=""
+            id=""
+            :value="item.id"
+            style="width: 70%"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 ```
 ## Adding Functionality

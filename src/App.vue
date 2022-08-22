@@ -10,7 +10,7 @@
     "
   >
     <div class="row bg-dark border-bottom border-primary border-3">
-      <div class="col-4 text-light pt-2 ps-4">
+      <div class="col-4 text-light pt-2 ps-4 d-flex justify-content-center">
         <div class="form-check">
           <input
             class="form-check-input"
@@ -26,7 +26,7 @@
           />
         </div>
       </div>
-      <div class="col-4 text-light pt-2 ps-4">
+      <div class="col-4 text-light pt-2 ps-4 d-flex justify-content-center">
         <div class="form-check">
           <input
             class="form-check-input"
@@ -42,7 +42,7 @@
           />
         </div>
       </div>
-      <div class="col-4 text-light pt-2 ps-4">
+      <div class="col-4 text-light pt-2 ps-4 d-flex justify-content-center">
         <div class="form-check">
           <input
             class="form-check-input"
@@ -103,6 +103,7 @@
               border border-secondary border-3
               rounded
               ps-2
+              
             "
             type="number"
             name=""
